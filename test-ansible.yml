@@ -1,6 +1,7 @@
 ---
   - name: Test s3
     hosts: local
+    become: true
     connection: local
 
     tasks:
