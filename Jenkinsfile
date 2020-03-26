@@ -9,7 +9,7 @@ pipeline {
         stage('Example stage 1') {
             steps {
                 echo "Welcome"
-                echo "${HAFIZ}
+                echo "${HAFIZ}"
             }
         }
         stage('Example stage 2') {
