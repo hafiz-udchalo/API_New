@@ -3,13 +3,13 @@ pipeline {
         // Define agent details here
     }
     environment {
-        
+        HAFIZ = credentials('Hafiz')
     }
     stages {
         stage('Example stage 1') {
             steps {
                 sh echo "Welcome"
-                sh echo "${Hafiz}
+                sh echo "${HAFIZ}
             }
         }
         stage('Example stage 2') {
