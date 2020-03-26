@@ -9,7 +9,8 @@ pipeline {
             steps {
                 echo "Welcome"
                 echo "${HAFIZ}"
-                ping "${WEB}"
+                sh "uptime"
+                sh 'ping "${WEB}"'
             }
         }
     }
