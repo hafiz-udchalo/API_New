@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        // Define agent details here
-    }
+    agent any
     environment {
         HAFIZ = credentials('Hafiz')
     }
@@ -10,11 +8,6 @@ pipeline {
             steps {
                 echo "Welcome"
                 echo "${HAFIZ}"
-            }
-        }
-        stage('Example stage 2') {
-            steps {
-                // 
             }
         }
     }
