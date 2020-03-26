@@ -8,8 +8,8 @@ pipeline {
     stages {
         stage('Example stage 1') {
             steps {
-                sh echo "Welcome"
-                sh echo "${HAFIZ}
+                echo "Welcome"
+                echo "${HAFIZ}
             }
         }
         stage('Example stage 2') {
