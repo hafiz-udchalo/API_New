@@ -10,7 +10,8 @@ pipeline {
                 echo "Welcome"
                 echo "${HAFIZ}"
                 sh "uptime"
-                sh 'ping "${WEB}"'
+                sh 'cat "${WEB}"'
+                sh 'ping "${PING}"'
             }
         }
     }
