@@ -3,6 +3,7 @@ pipeline {
     environment {
         HAFIZ = credentials('Hafiz')
         WEB = credentials('GOOGLE')
+        PING = credentials('PING')
     }
     stages {
         stage('Example stage 1') {
@@ -10,7 +11,6 @@ pipeline {
                 echo "Welcome"
                 echo "${HAFIZ}"
                 sh "uptime"
-                sh 'cat "${WEB}"'
                 sh 'ping "${PING}"'
             }
         }
