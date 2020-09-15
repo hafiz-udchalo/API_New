@@ -1,4 +1,7 @@
 version: 0.2
+env:
+  parameter-store:
+    STAGE_DEV: STAGE
 
 phases:
    install:
@@ -10,4 +13,4 @@ phases:
    post_build:
       commands:
          - echo $CODEBUILD_WEBHOOK_HEAD_REF
-         - echo $STAGE
+         - echo $STAGE_DEV
