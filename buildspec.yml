@@ -4,7 +4,7 @@ env:
    # BranchName: $BranchName
   parameter-store:
     #STAGE_DEV: STAGE
-    DB_PASSWORD: DB_PASSWORD
+    #DB_PASSWORD: DB_PASSWORD
 
 phases:
    install:
