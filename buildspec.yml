@@ -2,7 +2,7 @@ version: 0.2
 env:
   #variables:
    # BranchName: $BranchName
-  parameter-store:
+  #parameter-store:
     #STAGE_DEV: STAGE
     #DB_PASSWORD: DB_PASSWORD
 
