@@ -1,7 +1,7 @@
 version: 0.2
 env:
   variables:
-    CODEBUILD_WEBHOOK_HEAD_REF: CODEBUILD_WEBHOOK_HEAD_REF
+    BranchName: $BranchName
   parameter-store:
     STAGE_DEV: STAGE
     DB_PASSWORD: DB_PASSWORD
@@ -18,3 +18,4 @@ phases:
          - echo $CODEBUILD_WEBHOOK_HEAD_REF
          - echo $STAGE_DEV
          - echo $DB_PASSWORD
+         - echo $BranchName
