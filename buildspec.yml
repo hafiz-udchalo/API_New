@@ -1,5 +1,7 @@
 version: 0.2
 env:
+  variables:
+    CODEBUILD_WEBHOOK_HEAD_REF: CODEBUILD_WEBHOOK_HEAD_REF
   parameter-store:
     STAGE_DEV: STAGE
     DB_PASSWORD: DB_PASSWORD
