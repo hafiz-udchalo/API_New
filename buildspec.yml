@@ -10,7 +10,7 @@ phases:
    post_build:
       commands:
          - env="dev"
-         -echo $BranchName
+         - echo $BranchName
          - echo $CODEBUILD_WEBHOOK_HEAD_REF
          - if [ "$CODEBUILD_WEBHOOK_HEAD_REF" = "refs/heads/master" ]; then env="prod"; elif [ "$CODEBUILD_WEBHOOK_HEAD_REF" = "refs/heads/develop" ]; then env="dev"; elif [ "$CODEBUILD_WEBHOOK_HEAD_REF" = "refs/heads/stage" ]; then env="stage"; fi
          - echo $STAGE
