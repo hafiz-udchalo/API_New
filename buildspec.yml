@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+   install:
+      commands:
+         - echo "install stage"
+   build:
+      commands:
+         - echo "build step"
+   post_build:
+      commands:
+         - echo $CODEBUILD_WEBHOOK_HEAD_REF
+         - echo $STAGE
