@@ -3,7 +3,7 @@ env:
   #variables:
    # BranchName: $BranchName
   parameter-store:
-    #STAGE_DEV: STAGE
+    STAGE_DEV: STAGE
     DB_PASSWORD: DB_PASSWORD
 
 phases:
