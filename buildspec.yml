@@ -22,5 +22,5 @@ phases:
          - if [ $NODE_ENV = "prod" ]; then tableEnv="production"; else tableEnv="$NODE_ENV"; fi
          - echo $STAGE
          - echo $DB_PASSWORD
-         -echo $tableEnv
+         - echo $tableEnv
          
