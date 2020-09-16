@@ -17,7 +17,8 @@ phases:
       commands:
          - echo $CODEBUILD_WEBHOOK_HEAD_REF
          - echo $BranchName
-         - if [ "$BranchName" = "develop" ]; then NODE_ENV="dev"; elif [ "$BranchName" = "stage" ]; then NODE_ENV="stage"; elif [ "$BranchName" = "master" ]; then NODE_ENV="prod"; fi
+         - if [ "$CODEBUILD_WEBHOOK_HEAD_REF" = "refs/heads/develop" || "$BranchName" = "develop"]; then NODE_ENV="dev"; elif [ "$CODEBUILD_WEBHOOK_HEAD_REF" = "refs/heads/stage" || "$BranchName" = "stage" ]; then NODE_ENV="stage"; elif [ "$CODEBUILD_WEBHOOK_HEAD_REF" = "refs/heads/master" || "$BranchName" = "master"]; then NODE_ENV="prod"; fi
+         #- if [ "$BranchName" = "develop" ]; then NODE_ENV="dev"; elif [ "$BranchName" = "stage" ]; then NODE_ENV="stage"; elif [ "$BranchName" = "master" ]; then NODE_ENV="prod"; fi
          - echo "deploying for NODE_DEV=$NODE_ENV"
          - if [ $NODE_ENV = "prod" ]; then tableEnv="production"; else tableEnv="$NODE_ENV"; fi
          - echo $STAGE
