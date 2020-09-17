@@ -22,7 +22,9 @@ phases:
          - echo "deploying for NODE_DEV = $NODE_ENV"
          - if [ $NODE_ENV = "prod" ]; then tableEnv="production"; else tableEnv="$NODE_ENV"; fi
          - echo $STAGE_DEV
-         - echo $DB_PASSWORD
+         - echo $STAGE_STAGE
+         - echo $DB_PASSWORD_DEV
+         - echo $DB_PASSWORD_STAGE
          - echo $tableEnv
          - echo $BranchName
          - echo "$SHELL"
