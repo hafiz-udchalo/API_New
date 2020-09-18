@@ -23,4 +23,5 @@ phases:
          - echo $STAGE
          - echo $DB_PASSWORD
          - echo $tableEnv
+         - echo $BranchName
          
