@@ -20,6 +20,4 @@ phases:
          - if [ "$BranchName" = "develop" ]; then NODE_ENV="dev"; elif [ "$BranchName" = "stage" ]; then NODE_ENV="stage"; elif [ "$BranchName" = "master" ]; then NODE_ENV="prod"; fi
          - echo "deploying for NODE_DEV=$NODE_ENV"
          - if [ $NODE_ENV = "prod" ]; then tableEnv="production"; else tableEnv="$NODE_ENV"; fi
-         - echo $STAGE
-         - echo $DB_PASSWORD
          - echo $tableEnv        
